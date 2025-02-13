@@ -24,11 +24,11 @@
    ```sh
    cd CarConfigurator
    
-4. Run the following command:
+4. Write the following command, in order to compile the project and to create the distibutable files for this project:
    ```sh
    gradle build
    
-7. Run the following command:
+7. Write the following command, in order to run the application:
    ```sh
    gradle run
    ```
