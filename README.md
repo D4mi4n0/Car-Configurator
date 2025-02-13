@@ -24,7 +24,7 @@
    ```sh
    cd CarConfigurator
    
-4. Write the following command, in order to compile the project and to create the distibutable files for this project:
+4. Write the following command, in order to compile the project and to create the distributable files for this project:
    ```sh
    gradle build
    
