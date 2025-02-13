@@ -10,13 +10,18 @@
 
 ## How to run the project (from the terminal)
 
-1. Choose a directory where cloning this repository (like desktop), then write this following command:
+1. Clone this repository on your desktop, writing this following commands:
+   ```sh
+   cd desktop
+
+   And then:
+
    ```sh
    git clone https://github.com/D4mi4n0/Car-Configurator.git
 
-2. Go to the directory where the repo has been cloned. For example:
+2. Then search the repository cloned
    ```sh
-   cd desktop
+   cd Car-Configurator
    
 3. Navigate to the project directory:
    ```sh
@@ -26,7 +31,7 @@
    ```sh
    gradle build
    
-5. Run the following command:
+7. Run the following command:
    ```sh
    gradle run
    ```
