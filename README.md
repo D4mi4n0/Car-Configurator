@@ -13,10 +13,7 @@
 1. Clone this repository on your desktop, writing this following commands:
    ```sh
    cd desktop
-
-   And then:
-
-   ```sh
+   
    git clone https://github.com/D4mi4n0/Car-Configurator.git
 
 2. Then search the repository cloned
