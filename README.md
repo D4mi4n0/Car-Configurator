@@ -15,11 +15,11 @@ Git Bash or Command Prompts, please follow also the first two steps.
 
 1. Go to the directory where the folder has been unzipped. For example:
    ```sh
-   cd desktop
+   git clone https://github.com/D4mi4n0/Car-Configurator.git
 
-2. Search for the directory of the folder with SurnameNameNumber
+2. Go to the directory where the repo has been cloned. For example:
    ```sh
-   cd MontanaroDamiano122407
+   cd desktop
    
 3. Navigate to the project directory:
    ```sh
