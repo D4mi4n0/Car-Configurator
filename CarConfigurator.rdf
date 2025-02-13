@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://studentproject.org/car-configurator#"
+     xml:base="http://studentproject.org/car-configurator"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     
+    <owl:Ontology rdf:about="http://studentproject.org/car-configurator">
+        <rdfs:comment>An ontology to describe a car configurator application, including cars and their properties.</rdfs:comment>
+        <rdfs:label>Car Configurator Ontology</rdfs:label>
+    </owl:Ontology>
+
+    <!-- Annotation properties -->
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+
+    <!-- Object Properties -->
+    <owl:ObjectProperty rdf:about="http://studentproject.org/brand">
+        <rdfs:domain rdf:resource="http://studentproject.org/Car"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://studentproject.org/color">
+        <rdfs:domain rdf:resource="http://studentproject.org/Car"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://studentproject.org/compatibleWith">
+        <rdfs:domain rdf:resource="http://studentproject.org/Component"/>
+        <rdfs:range rdf:resource="http://studentproject.org/Component"/>
+        <rdfs:comment>Indicates compatibility between components.</rdfs:comment>
+        <rdfs:label>compatibleWith</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://studentproject.org/hasComponent">
+        <rdfs:domain rdf:resource="http://studentproject.org/Car"/>
+        <rdfs:range rdf:resource="http://studentproject.org/Component"/>
+        <rdfs:comment>Links a car to its components.</rdfs:comment>
+        <rdfs:label>hasComponent</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://studentproject.org/hasOption">
+        <rdfs:domain rdf:resource="http://studentproject.org/Component"/>
+        <rdfs:range rdf:resource="http://studentproject.org/Option"/>
+        <rdfs:comment>Links a component to its available options.</rdfs:comment>
+        <rdfs:label>hasOption</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://studentproject.org/horsePower">
+        <rdfs:domain rdf:resource="http://studentproject.org/Engine"/>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://studentproject.org/price">
+        <rdfs:domain rdf:resource="http://studentproject.org/Car"/>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://studentproject.org/producedBy">
+        <rdfs:domain rdf:resource="http://studentproject.org/Car"/>
+        <rdfs:range rdf:resource="dbpedia:Company"/>
+        <rdfs:comment>Links a car to its manufacturer.</rdfs:comment>
+        <rdfs:label>producedBy</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://studentproject.org/warrantyPeriod">
+        <rdfs:domain rdf:resource="http://studentproject.org/Car"/>
+        <rdfs:range rdf:resource="xsd:integer"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://studentproject.org/weight">
+        <rdfs:domain rdf:resource="http://studentproject.org/Component"/>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+    </owl:ObjectProperty>
+
+    <!-- Data properties -->
+    <owl:DatatypeProperty rdf:about="http://studentproject.org/brand">
+        <rdfs:domain rdf:resource="http://studentproject.org/Car"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://studentproject.org/color">
+        <rdfs:domain rdf:resource="http://studentproject.org/Car"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://studentproject.org/horsePower">
+        <rdfs:domain rdf:resource="http://studentproject.org/Engine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://studentproject.org/price">
+        <rdfs:domain rdf:resource="http://studentproject.org/Car"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://studentproject.org/warrantyPeriod">
+        <rdfs:domain rdf:resource="http://studentproject.org/Car"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://studentproject.org/weight">
+        <rdfs:domain rdf:resource="http://studentproject.org/Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="dbpedia:Company">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Company which produces cars</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Company</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://studentproject.org/Car">
+        <rdfs:comment>Represents a generic configurable car.</rdfs:comment>
+        <rdfs:label>Car</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://studentproject.org/Color">
+        <rdfs:comment>Represents a color option for cars.</rdfs:comment>
+        <rdfs:label>Color</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://studentproject.org/Option"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://studentproject.org/Component">
+        <rdfs:comment>Represents a component of a car.</rdfs:comment>
+        <rdfs:label>Component</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://studentproject.org/ElectricCar">
+        <rdfs:comment>Represents a specific type of car representing electric cars.</rdfs:comment>
+        <rdfs:label>Electric Car</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://studentproject.org/Car"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://studentproject.org/Engine">
+        <rdfs:comment>Represents an engine for cars.</rdfs:comment>
+        <rdfs:label>Engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://studentproject.org/Component"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://studentproject.org/LuxuryCar">
+        <rdfs:comment>Represents a specific type of car representing luxury cars.</rdfs:comment>
+        <rdfs:label>Luxury Car</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://studentproject.org/Car"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://studentproject.org/Material">
+        <rdfs:comment>Represents a material option for components.</rdfs:comment>
+        <rdfs:label>Material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://studentproject.org/Option"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://studentproject.org/Option">
+        <rdfs:comment>Represents a selectable option for a car or component.</rdfs:comment>
+        <rdfs:label>Option</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://studentproject.org/SportsCar">
+        <rdfs:comment>Represents a specific type of car representing sports cars.</rdfs:comment>
+        <rdfs:label>Sports Car</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://studentproject.org/Car"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://studentproject.org/Wheel">
+        <rdfs:comment>Represents a wheel for cars.</rdfs:comment>
+        <rdfs:label>Wheel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://studentproject.org/Component"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="xsd:decimal"/>
+    <owl:Class rdf:about="xsd:integer"/>
+    <owl:Class rdf:about="xsd:string"/>
+
+    <!-- Annotations -->
+    <rdf:Description rdf:about="http://studentproject.org/brand">
+        <rdfs:comment>Represents the brand of a car.</rdfs:comment>
+        <rdfs:label>brand</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://studentproject.org/color">
+        <rdfs:label>color</rdfs:label>
+        <rdfs:comment>Represents the color of a car.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://studentproject.org/horsePower">
+        <rdfs:label>horsePower</rdfs:label>
+        <rdfs:comment>Represents the horsepower of an engine.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://studentproject.org/price">
+        <rdfs:label>price</rdfs:label>
+        <rdfs:comment>Represents the price of a car or component.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://studentproject.org/warrantyPeriod">
+        <rdfs:comment>Represents the warranty period of a car in years.</rdfs:comment>
+        <rdfs:label>warrantyPeriod</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://studentproject.org/weight">
+        <rdfs:comment>Represents the weight of a component.</rdfs:comment>
+        <rdfs:label>weight</rdfs:label>
+    </rdf:Description>
+
+    <!-- Individuals -->
+
+    <!-- Individuals of Class Car -->
+    <rdf:Description rdf:about="http://studentproject.org/car-configurator#Car1">
+        <rdf:type rdf:resource="http://studentproject.org/car-configurator#Car"/>
+        <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toyota</brand>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35000.0</price>
+        <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Red</color>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://studentproject.org/car-configurator#Car2">
+        <rdf:type rdf:resource="http://studentproject.org/car-configurator#Car"/>
+        <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ford</brand>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">28000.0</price>
+        <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue</color>
+    </rdf:Description>
+
+    <!-- Individual of Class ElectricCar -->
+    <rdf:Description rdf:about="http://studentproject.org/car-configurator#ElectricCar1">
+        <rdf:type rdf:resource="http://studentproject.org/car-configurator#ElectricCar"/>
+        <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tesla</brand>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">75000.0</price>
+        <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White</color>
+    </rdf:Description>
+
+    <!-- Individuals of Class Engine -->
+    <rdf:Description rdf:about="http://studentproject.org/car-configurator#Engine1">
+        <rdf:type rdf:resource="http://studentproject.org/car-configurator#Engine"/>
+        <horsePower rdf:datatype="http://www.w3.org/2001/XMLSchema#float">450.0</horsePower>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://studentproject.org/car-configurator#Engine2">
+        <rdf:type rdf:resource="http://studentproject.org/car-configurator#Engine"/>
+        <horsePower rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</horsePower>
+    </rdf:Description>
+
+    <!-- Individuals of Class Wheel -->
+    <rdf:Description rdf:about="http://studentproject.org/car-configurator#Wheel1">
+        <rdf:type rdf:resource="http://studentproject.org/car-configurator#Wheel"/>
+        <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</weight>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://studentproject.org/car-configurator#Wheel2">
+        <rdf:type rdf:resource="http://studentproject.org/car-configurator#Wheel"/>
+        <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</weight>
+    </rdf:Description>
+
+    <!-- Individuals of Class Option -->
+    <rdf:Description rdf:about="http://studentproject.org/car-configurator#Option1">
+        <rdf:type rdf:resource="http://studentproject.org/car-configurator#Option"/>
+        <rdfs:label>Sunroof</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://studentproject.org/car-configurator#Option2">
+        <rdf:type rdf:resource="http://studentproject.org/car-configurator#Option"/>
+        <rdfs:label>Leather Seats</rdfs:label>
+    </rdf:Description>
+
+</rdf:RDF>

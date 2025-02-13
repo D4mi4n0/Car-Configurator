@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:id="grid" xmlns:fx="http://javafx.com/fxml" fx:controller="org.CarConfig.UserInterfaceController" vgap="8" hgap="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+    <Label text="Select car type:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <ChoiceBox fx:id="carTypeChoice" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <Label text="Enter car brand:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="brandInput" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Enter car price (10000 - 200000):" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="priceInput" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Enter car color:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="colorInput" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Label text="Enter engine horsepower (100 - 500):" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="horsepowerInput" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <Label text="Enter number of wheels (1 - 4):" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <TextField fx:id="wheelsInput" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <Button text="Reset Wheels" fx:id="resetWheelsButton" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+
+    <Label text="Select additional options:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <CheckBox text="Air Conditioning" fx:id="airConditioning" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <CheckBox text="Leather Seats" fx:id="leatherSeats" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+    <CheckBox text="Sunroof" fx:id="sunroof" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+
+    <Label text="Select material option:" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+    <ChoiceBox fx:id="materialChoice" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+
+    <Label fx:id="distinctiveFeatureLabel" text="Enter distinctive feature:" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+    <TextField fx:id="distinctiveFeatureInput" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+
+    <ChoiceBox fx:id="luxuryFeatureChoice" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+
+    <Button text="Submit" fx:id="submitButton" GridPane.columnIndex="1" GridPane.rowIndex="12"/>
+    <Button text="Reset All" fx:id="resetAllButton" GridPane.columnIndex="2" GridPane.rowIndex="12"/>
+</GridPane>
