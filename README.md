@@ -13,7 +13,7 @@
 READ THIS: If you want to run the project directly from a terminal like
 Git Bash or Command Prompts, please follow also the first two steps.
 
-1. Go to the directory where the folder has been unzipped. For example:
+1. Choose a directory where cloning this repository, then write this following command:
    ```sh
    git clone https://github.com/D4mi4n0/Car-Configurator.git
 
@@ -66,11 +66,7 @@ The application with the UI will guide the user through the configuration proces
 
 ****
 
-## Any questions?
-
-Please feel free to contact me at: [damiano.montanaro@studenti.unicam.it]
-
-****
+# One more thing...
 
 If you are reading this, would you gift me a Lexus LBX, please? 🚗🎁
 
