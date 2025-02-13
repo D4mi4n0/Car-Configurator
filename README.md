@@ -28,10 +28,10 @@
    ```sh
    gradle build
    
-7. Write the following command, in order to run the application:
+5. Then write the following command, in order to run the application:
    ```sh
    gradle run
-   ```
+   
 ****
 
 ## How the configurator works (by following these steps)
