@@ -8,7 +8,7 @@
 - Java 11 or higher (in this case, I used Java 21)
 - Gradle 6.0 or higher (in this case, I used Gradle 8.11)
 
-## How to run the project (from the terminal)
+## How to run the project
 
 1. Clone this repository on your desktop, writing this following commands:
    ```sh
