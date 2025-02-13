@@ -16,11 +16,11 @@
    
    git clone https://github.com/D4mi4n0/Car-Configurator.git
 
-2. Then search the repository cloned
+2. Then search the repository cloned in your desktop
    ```sh
    cd Car-Configurator
    
-3. Navigate to the project directory:
+3. Navigate to the project directory, in order to execute correctly the last two commands:
    ```sh
    cd CarConfigurator
    
